@@ -148,6 +148,16 @@ MindSight/
     └── voice_emotion.py
 ```
 
+## 🧑‍💻 Our Team
+
+This project was brought to life by the collaborative efforts of:
+
+- [Jayal Shah](https://www.linkedin.com/in/jayal-shah04/)
+- [Sakshi Makwana](https://www.linkedin.com/in/sakshii125/)
+- [Mayank Jangid](https://www.linkedin.com/in/mayank-jangid-0a5207359/)
+- [Raj Patel]
+- [Vishwas Patel]
+
 ---
 
 ## 🤝 Contributing
