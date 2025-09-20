@@ -49,8 +49,8 @@ Follow these steps to run **MindSight** on your local machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd MindSight_Project
+git clone https://github.com/014-Jayal/MindSight-Hackathon
+cd MindSight-Hackathon
 ```
 
 Or download the ZIP and extract it manually.
@@ -104,7 +104,7 @@ The AI Companion requires a **Google Gemini API Key**.
 
 ```powershell
 # On Windows (PowerShell)
-$env:GOOGLE_API_KEY="GEMINI_API_KEY"
+$env:GOOGLE_API_KEY="PASTE_YOUR_API_KEY_HERE"
 
 ```
 
@@ -125,17 +125,27 @@ The app will open automatically in your browser 🎉
 ## 📂 Project Structure
 
 ```
+## 📂 Project Structure
+
 MindSight/
 │
-├── app.py                 # Main Streamlit app
-├── requirements.txt       # Dependencies
-├── utils/
-│   ├── text_analysis.py   # Journal sentiment & analysis
-│   ├── generative_ai.py   # GPT/Gemini API integration
-│   ├── voice_emotion.py   # Voice emotion detection
-│   ├── face_emotion.py    # Facial emotion detection
-│   └── data_storage.py    # Data persistence & utilities
-└── README.md              # Project documentation
+├── app.py              # Main Streamlit app script
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+├── packages.txt          # System-level dependencies for deployment
+└── utils/
+    ├── __init__.py
+    ├── crisis_detection.py
+    ├── data_storage.py
+    ├── face_emotion.py
+    ├── generative_ai.py
+    ├── goals.py
+    ├── insights.py
+    ├── llm_api.py
+    ├── memory_vault.py
+    ├── resources.py
+    ├── text_analysis.py
+    └── voice_emotion.py
 ```
 
 ---
