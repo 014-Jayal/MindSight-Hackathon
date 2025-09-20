@@ -104,7 +104,7 @@ The AI Companion requires a **Google Gemini API Key**.
 
 ```powershell
 # On Windows (PowerShell)
-$env:GOOGLE_API_KEY="AIzaSyA-tQtWlDenTH6tBYoBC9rOhtWlbDH52Kw"
+$env:GOOGLE_API_KEY="GEMINI_API_KEY"
 
 ```
 
