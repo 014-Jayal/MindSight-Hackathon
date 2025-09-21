@@ -1,140 +1,130 @@
-# 🌿 MindSight – AI Mental Wellness Companion
+# MindSight – AI Mental Wellness Companion
 
-MindSight is a comprehensive, multi-feature **Streamlit application** designed to support mental wellness.  
-It combines **real-time conversational AI, journal analysis, mood tracking, personalized insights, and guided exercises** into a single, easy-to-use platform.
+MindSight is an AI-powered mental wellness platform that integrates conversational AI, journal analysis, emotion detection, mood tracking, and guided exercises into a single, intuitive interface. It helps users understand, reflect on, and improve their emotional well-being through technology, data-driven insights, and evidence-based wellness practices.
 
----
+**Please note:** MindSight is a supportive tool and does not replace professional mental health care.
 
-## ✨ Features
 
-- **🤖 AI Companion**  
-  A real-time, empathetic chatbot powered by the **Google Gemini API** for supportive conversations.
 
-- **📔 Journal Analysis**  
-  Analyze journal entries for **sentiment**, track **mood trends**, and detect potential crises.
+## 1. Introduction
 
-- **📊 Personalized Insights**  
-  Discover correlations between **keywords** in your journal and **mood scores**.
+Mental wellness is a critical component of overall health. Digital tools that combine self-monitoring, reflective practice, and guided interventions have been shown to enhance well-being, reduce stress, and increase emotional resilience. MindSight leverages advances in natural language processing, affective computing, and AI-driven analytics to provide a holistic, user-friendly platform for mental wellness.
 
-- **🎯 Daily Goals Tracker**  
-  Set, track, and manage daily wellness goals.
 
-- **💎 Positive Memory Vault**  
-  Save and revisit positive memories to boost mental well-being.
 
-- **🎤 Voice & Facial Emotion Analysis**  
-  AI-powered emotion detection from **voice** and **facial expressions**.
+## 2. Features
 
-- **🧘 Guided Exercises**  
-  Simple mindfulness activities, including a **guided breathing exercise**.
+### AI Companion
+A real-time AI chatbot powered by the Google Gemini API for empathetic, context-aware conversations.
+- Supports reflective dialogue and emotional expression.
+- Provides conversational guidance and motivation.
 
-- **📚 Resource Hub**  
-  A curated library of **articles and resources** for mental wellness.
+### Journal Analysis
+Analyze daily journal entries for sentiment trends, recurring emotional patterns, and potential distress indicators.
+- Helps users recognize triggers and monitor emotional well-being.
+- Supports early detection of mental health challenges.
 
----
+### Personalized Insights
+Identify correlations between keywords, mood scores, and behavioral patterns.
+- Enables informed decision-making and self-regulation.
+- Supports behavioral improvement and emotional awareness.
 
-## ⚙️ Tech Stack
+### Daily Goals Tracker
+Set, track, and achieve wellness goals.
+- Encourages structured behavioral changes.
+- Provides measurable progress and motivation.
 
-- **Frontend:** [Streamlit](https://streamlit.io/)  
-- **Generative AI:** Google Gemini API  
-- **Local AI Models:** Hugging Face Transformers (sentiment & voice), [`fer`](https://github.com/justinshenk/fer) (facial emotion recognition)  
-- **Core Libraries:** Pandas, Plotly, OpenCV, Scikit-learn  
+### Positive Memory Vault
+A secure space to store and revisit positive experiences.
+- Strengthens emotional resilience and boosts mood.
+- Encourages reflective mindfulness practices.
 
----
+### Voice & Facial Emotion Analysis
+AI models analyze voice tone and facial expressions for emotion detection.
+- Combines multimodal cues for a richer understanding of emotional state.
 
-## 🛠️ Installation & Setup
+### Guided Exercises
+Mindfulness exercises, including guided breathing and meditation.
+- Supports emotional regulation and relaxation.
+- Enhances attention and mental clarity.
 
-Follow these steps to run **MindSight** on your local machine:
+### Resource Hub
+A curated collection of articles, tips, and self-help materials to guide users in mental wellness practices.
 
-### 1. Clone the Repository
 
+
+## 3. Technology Stack
+
+| Layer | Technology / Libraries |
+|-------|----------------------|
+| Frontend | Streamlit (interactive UI) |
+| Generative AI | Google Gemini API (empathetic conversation) |
+| Local AI Models | Hugging Face Transformers (sentiment & voice), FER (facial emotion recognition) |
+| Data & Visualization | Pandas, Plotly |
+| Computer Vision | OpenCV |
+| Machine Learning | Scikit-learn |
+
+
+
+## 4. Installation and Setup
+
+### Step 1: Clone Repository
 ```bash
 git clone https://github.com/014-Jayal/MindSight-Hackathon
 cd MindSight-Hackathon
-```
+````
 
-Or download the ZIP and extract it manually.
-
----
-
-### 2. Create and Activate a Virtual Environment
-
-It’s recommended to use a **virtual environment** to avoid dependency conflicts.
+### Step 2: Create and Activate Virtual Environment
 
 ```bash
-# Create virtual environment
 python -m venv venv
 
-# Activate it
-# On Windows (PowerShell)
+# Windows
 .\venv\Scripts\Activate.ps1
 
-# On macOS/Linux
+# macOS/Linux
 source venv/bin/activate
 ```
 
-When activated, you should see `(venv)` in your terminal prompt.
-
----
-
-### 3. Install Dependencies
+### Step 3: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-This may take several minutes since large libraries (TensorFlow, PyTorch, etc.) will be installed.
-
----
-
-### 4. Download spaCy Language Model
+### Step 4: Download spaCy Model
 
 ```bash
 python -m spacy download en_core_web_sm
 ```
 
----
+### Step 5: Set Google Gemini API Key
 
-### 5. Set Google Gemini API Key
-
-The AI Companion requires a **Google Gemini API Key**.
-
-- Get a key from [Google AI Studio](https://aistudio.google.com/).
-- Set it as an **environment variable** (do not hardcode in code).
-
-```powershell
-# On Windows (PowerShell)
-$env:GOOGLE_API_KEY="PASTE_YOUR_API_KEY_HERE"
-
+```bash
+# Windows
+$env:GOOGLE_API_KEY="YOUR_API_KEY"
 ```
 
-⚠️ **Note:** You’ll need to set this variable each time you open a new terminal.
-
----
-
-### 6. Run the Application
+### Step 6: Run Application
 
 ```bash
 streamlit run app.py
 ```
 
-The app will open automatically in your browser 🎉
+The app will open automatically in your browser.
 
----
 
-## 📂 Project Structure
+
+## 5. Project Structure
 
 ```
-## 📂 Project Structure
-
 MindSight/
 │
-├── app.py              # Main Streamlit app script
-├── requirements.txt      # Python dependencies
-├── README.md             # Project documentation
-├── packages.txt          # System-level dependencies for deployment
+├── app.py                  # Main Streamlit app
+├── requirements.txt        # Python dependencies
+├── packages.txt            # System-level dependencies
+├── README.md               # Project documentation
 └── utils/
-    ├── __init__.py
     ├── crisis_detection.py
     ├── data_storage.py
     ├── face_emotion.py
@@ -148,7 +138,42 @@ MindSight/
     └── voice_emotion.py
 ```
 
-## 🧑‍💻 Our Team
+
+
+## 6. System Architecture
+
+MindSight’s modular architecture integrates multiple AI components:
+
+1. **Input Layer:** Text (journal entries), voice, and facial images.
+2. **Processing Layer:**
+
+   * NLP models for sentiment and keyword analysis
+   * Voice and facial emotion recognition models
+   * Correlation analysis for insights and trends
+3. **Output Layer:**
+
+   * AI Companion responses
+   * Mood and goal visualizations
+   * Personalized insights and guided exercises
+
+This modular design ensures scalability, maintainability, and easy integration of future AI enhancements.
+
+
+
+## 7. Impact and Use Cases
+
+MindSight can be used for:
+
+* Daily self-reflection and mood tracking
+* Early identification of emotional distress
+* Supporting mindfulness and positive habit formation
+* Providing accessible AI-based emotional support
+
+It demonstrates how AI can ethically support mental wellness while balancing accuracy, usability, and user privacy.
+
+
+
+## 8. Team
 
 This project was brought to life by the collaborative efforts of:
 
@@ -158,35 +183,28 @@ This project was brought to life by the collaborative efforts of:
 - [Raj Patel]
 - [Vishwas Patel]
 
----
 
-## 🤝 Contributing
 
-We welcome contributions!  
-- Fork the repo  
-- Create a new branch (`feature/your-feature`)  
-- Commit changes and push  
-- Submit a Pull Request 🚀  
+## 9. Contributing
 
----
+We welcome contributions:
 
-## 📜 License
+1. Fork the repository.
+2. Create a new branch: `feature/your-feature`.
+3. Commit your changes and push.
+4. Submit a Pull Request.
 
-This project is licensed under the **MIT License**.  
-See [LICENSE](LICENSE) for details.
 
----
 
-## 💡 Acknowledgements
+## 10. Acknowledgements
 
-- [Streamlit](https://streamlit.io/) for rapid app development  
-- [Google AI Studio](https://aistudio.google.com/) for Gemini API  
-- [Hugging Face](https://huggingface.co/) for open-source NLP & AI models  
-- [FER](https://github.com/justinshenk/fer) for facial emotion recognition  
+* [Streamlit](https://streamlit.io/) for rapid app development
+* [Google AI Studio](https://aistudio.google.com/) for Gemini API
+* [Hugging Face](https://huggingface.co/) for open-source NLP & AI models
+* [FER](https://github.com/justinshenk/fer) for facial emotion recognition
 
----
 
-## 🌟 Final Note
 
-MindSight is not a replacement for professional mental health care.  
-If you’re struggling, please seek help from a qualified professional.
+## 11. Important Note
+
+MindSight is a supportive tool and **not a substitute for professional mental health care**. Users experiencing emotional distress should seek assistance from qualified healthcare professionals.
